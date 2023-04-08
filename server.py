@@ -5,10 +5,7 @@ from pymongo import MongoClient
 import gridfs
 import os
 from dotenv import load_dotenv
-from PIL import Image
 from fastapi.responses import StreamingResponse
-import zlib
-import binascii
 
 
 load_dotenv()
