@@ -17,6 +17,11 @@ fs = gridfs.GridFS(MongoClient(os.getenv('CON_')).Cat)
 
 
 # routes
+@app.get('/')
+async def HealthCheck():
+    return({"Status": 200})
+
+
 @app.get("/get_cat_images", responses={
     200: {
         "content": {"image/png": {}}
